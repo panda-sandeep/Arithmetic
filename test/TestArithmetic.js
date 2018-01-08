@@ -37,6 +37,19 @@ contract('Arithmetic', function() {
         });
     });
 
+    it('should multiply storedValue correctly', function(done){
+        Arithmetic.deployed().then(function(instance) {
+            instance.storedValue().then(function(oldValue){
+                instance.multiply(10).then(function(){
+                    instance.storedValue().then(function(newValue){
+                        assert.equal(Number(oldValue.toString(10)) * 10, Number(newValue.toString(10)), 'Number wasn\'t multiplied correctly');
+                        done();
+                    });
+                });
+            });
+        });
+    });
+
     it('should divide storedValue correctly', function(done){
         Arithmetic.deployed().then(function(instance) {
             instance.storedValue().then(function(oldValue){
