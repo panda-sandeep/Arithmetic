@@ -1,6 +1,6 @@
 var HDWalletProvider = require("truffle-hdwallet-provider");
 var infura_apikey = "KbQuP7xkP1ZYNhJkUOXF"; // Replace this with your own API key
-var mnemonic = "rail fix box entry ride afraid actress rabbit below mistake type develop"; // Replace with your own seed phrase from MetaMask
+var mnemonic = "xxx xxx xxx..."; // Replace with your own seed phrase from MetaMask
 
 module.exports = {
   networks: {
